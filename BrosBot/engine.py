@@ -18,7 +18,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 
 async def load():
-    for filename in os.listdir(os.getcwd() + r'\\BrosBot\\cogs'):
+    for filename in os.listdir(os.path.join(os.getcwd(), 'BrosBot', 'cogs')):
         if filename.endswith('.py'):
             print('test')
             await bot.load_extension('cogs.' + filename[:-3])
